@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: test_ab_sa
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 2114646d829464dcab420ffcf7f1ccda, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 902855427adc340029d392e9100f8894, type: 3}
+  - {fileID: 21300000, guid: bd0fe9f3a7ac84196a2ecf61d6675289, type: 3}
+  - {fileID: 21300000, guid: 8ad486a47cf7f4fe99317e6c223a1335, type: 3}
+  - {fileID: 21300000, guid: 697de39d2b8cb4c438bbca32ab37963e, type: 3}
+  - {fileID: 21300000, guid: 38a76e1f25f1842159cdb0445b724627, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CBR_UI_displayPanel_360x480_iphone5
+  - CBR_UI_icon_X_60
+  - CBR_UI_pageButton_60x60_iphone5
+  - CBR_UI_ingame_iconNext_30x30_jphone5
+  - CBR_UI_panelButton_225x60_iphone5
+  m_Tag: test_ab_sa
+  m_IsVariant: 0
