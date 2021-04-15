@@ -8,16 +8,9 @@ using UnityEngine.Events;
 
 public class Downloader
 {    
-    const string baseUrl = "https://sg-cbr-test.uc.r.appspot.com/";
-    //const string baseUrl = "http://localhost:8080/";
-
-#if HEADLESS_CLIENT && UNITY_STANDALONE_LINUX
-    const string assetBundlePathOnDisk = "/home/ubuntu/unity/asset_bundles/";
-#elif HEADLESS_CLIENT && (UNITY_STANDALONE_OSX || UNITY_EDITOR_OSX)
-    const string assetBundlePathOnDisk = "./Assets/AssetBundles/";
-#else
+    const string baseUrl = "https://sg-cbr-test.uc.r.appspot.com/";    
     const string bundleBaseUrl = "https://cbrwebgl.s3.us-east-2.amazonaws.com/";
-#endif
+
 
     private static UnityWebRequest makePostRequest(string url, string json)
     {
@@ -90,22 +83,6 @@ public class Downloader
         platformBundleName += "-Linux";
 #endif
 
-#if HEADLESS_CLIENT
-        Debug.Log("Loading asset bundle from disk: " + assetBundlePathOnDisk + platformBundleName);
-        
-        AssetBundle assetBundle = AssetBundle.LoadFromFile(assetBundlePathOnDisk + platformBundleName);
-        if (assetBundle != null)
-        {
-            Debug.Log("Asset bundle loaded from disk!");
-            AssetBundleManager.addAssetBundle(bundleIdentifier, assetBundle);
-            callback(assetBundle);
-        }
-        else
-        {
-            Debug.LogError("BUNDLE IS NULL");
-        }
-        yield return null;
-#else
         List<Hash128> cachedVersions = new List<Hash128>();
         Caching.GetCachedVersions(platformBundleName, cachedVersions);
         Hash128 versionCheckHash = Hash128.Compute(AssetBundleManager.getAssetBundleVersion(bundleIdentifier).ToString());
@@ -158,6 +135,5 @@ public class Downloader
                 }
             }
         }
-#endif
     }
 }

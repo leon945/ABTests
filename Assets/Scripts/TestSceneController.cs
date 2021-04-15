@@ -9,11 +9,8 @@ public class TestSceneController : MonoBehaviour
 
     private void Awake()
     {
-        var ab = AssetBundleManager.get2DUIAssetBundle();
-        var atlas = Instantiate(ab.LoadAsset<SpriteAtlas>("test_ab_sa"));
-        var sprite = atlas.GetSprite("CBR_UI_displayPanel_360x480_iphone5");
-        var ui = Instantiate(ab.LoadAsset<GameObject>("testui"));
-        ui.GetComponent<UiRefs>().panel.sprite = sprite;
+        var ab = AssetBundleManager.get2DUIAssetBundle();        
+        var ui = Instantiate(ab.LoadAsset<GameObject>("testui"));        
         ui.transform.parent = uiParent.transform;
         ui.transform.localPosition = Vector3.zero;
         ui.transform.localScale = Vector3.one;
